@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hugolinpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hugolinpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: hugolinpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: hugolinpipelinesjavascriptdocker 
+          image: jianfenglinassigment2.azurecr.io/hugolinpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
